@@ -11,6 +11,23 @@ const employeeList = [
   { Name: "Employee B", Position: "Team Member", Salary: 40000 },
 ];
 
+const tableBody = document.querySelector("#employee-table tbody");
+console.log(tableBody);
+
+function createEmployeeRows() {
+  const employeeRows = employeeList.map((employee) => {
+    const newRow = document.createElement("tr");
+    for (const property in employee) {
+      const newCell = document.createElement("td");
+      newCell.textContent = employee[property];
+      newRow.appendChild(newCell);
+    }
+    return newRow;
+  });
+  tableBody.replaceChildren(...employeeRows);
+}
+createEmployeeRows();
+
 let userIsFinished = false;
 // while (!userIsFinished) {
 //   const newHireInfo = prompt(

@@ -1,0 +1,11 @@
+#employee-table {
+  table-layout: fixed;
+  width: 60%;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  text-align: center;
+}

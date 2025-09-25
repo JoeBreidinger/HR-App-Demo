@@ -11,7 +11,9 @@ const employeeList = [
   { Name: "Employee B", Position: "Team Member", Salary: 40000 },
 ];
 
+const addEmployeeForm = document.querySelector("#add-employee");
 const tableBody = document.querySelector("#employee-table tbody");
+
 console.log(tableBody);
 
 function createEmployeeRows() {
@@ -27,6 +29,18 @@ function createEmployeeRows() {
   tableBody.replaceChildren(...employeeRows);
 }
 createEmployeeRows();
+
+addEmployeeForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const formData = new FormData(addEmployeeForm);
+  const newEmployee = {
+    name: formData.get("name"),
+    position: formData.get("position"),
+    salary: +formData.get("salary"),
+  };
+  employeeList.push(newEmployee);
+  createEmployeeRows();
+});
 
 let userIsFinished = false;
 // while (!userIsFinished) {

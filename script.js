@@ -12,21 +12,21 @@ const employeeList = [
 ];
 
 let userIsFinished = false;
-while (!userIsFinished) {
-  const newHireInfo = prompt(
-    "Please enter employee's information",
-    "Employee Name, Position, Salary"
-  );
-  if (newHireInfo === null) {
-    userIsFinished = true;
-    continue;
-  }
-  const newHireArray = newHireInfo.split(",");
-  const newEmployee = createEmployee(newHireArray);
-  employeeList.push(newEmployee);
-  console.log(employeeList);
-  alert("Employee added successfullly!");
-}
+// while (!userIsFinished) {
+//   const newHireInfo = prompt(
+//     "Please enter employee's information",
+//     "Employee Name, Position, Salary"
+//   );
+//   if (newHireInfo === null) {
+//     userIsFinished = true;
+//     continue;
+//   }
+//   const newHireArray = newHireInfo.split(",");
+//   const newEmployee = createEmployee(newHireArray);
+//   employeeList.push(newEmployee);
+//   console.log(employeeList);
+//   alert("Employee added successfullly!");
+// }
 
 /**
  *
@@ -42,3 +42,33 @@ function createEmployee(newHireInfoArray) {
   };
   return newHire;
 }
+
+// 1. Prompt user (with window) for employees info - user puts in comma separated list
+// const newHireInfo = prompt(
+//   "Please enter employee's information",
+//   "Employee Name, Position, Salary"
+// );
+// console.log(newHireInfo);
+
+//  2. Create an object that has the shape described in the 'data' section
+//      a. split newHireInfo into sting by commas
+//      b. create a variable containing an empty object literal newHire = {}
+// const newHireArray = newHireInfo.split(","); // turns input into an array
+// console.log(newHireArray);
+// const newHire = {
+//   name: newHireArray[0].trim(),
+//   position: newHireArray[1].trim(),
+//   salary: Number(newHireArray[2].trim()),
+// };
+// creates a new object to transpose array into
+// newHire.Name = newHireArray[0].trim(); // outlines how array should be structured
+// newHire.Position = newHireArray[1].trim(); // into the object
+// newHire.Salary = Number(newHireArray[2].trim()); // as described above in @typedef
+// console.log(newHire);
+
+// 3. Push object into array
+// employeeList.push(newHire);
+// // console.log(employeeList);
+
+//  4. Alert the user that the employee was added successfully
+// alert("Employee added successfully!");

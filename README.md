@@ -35,3 +35,6 @@ Each Iteration: 1. Prompt user (with window) for employees info
 a. - either user puts in comma separated list -
 i. (Zach Taylor, President, 100000) - this will be stored as a variable
 b. or several prompt for each piece of info 2. Create an object that has the shape described in the 'data' section with the inputted data 3. Push object into array 4. Alert the user that the employee was added successfully
+
+
+
